@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="container">
+    <img src="">
+    <h1>NotesApp</h1>
+  </div>
+</div>
+
+<div class="notebooks">
+  <div class="container">
+  
+<% @notebooks.each do |notebook| %>
+    <div class="notebook">
+      <p class="content"><%= notebook.content %></p>
+      <p class="time"><%= notebook.created_at %></p>
+    </div>
+    <% end %>
+
+    <%= link_to 'New Notebook', "notebooks/new" %>
+    
+  </div>
+</div>
+
+
