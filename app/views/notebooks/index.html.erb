@@ -7,13 +7,14 @@
 
 <div class="notebooks">
   <div class="container">
-  
-<% @notebooks.each do |notebook| %>
-    <div class="notebook">
-      <p class="content"><%= notebook.content %></p>
-      <%= link_to 'New Note', "notes/new" %>
-      <!--<p class="time"><%= notebook.created_at %></p> -->
-    </div>
+
+    <% @notebooks.each do |notebook| %>
+        <div class="notebook">
+          <p class="content"><%= notebook.content %></p>
+          <%= link_to 'Notebook info', notebook_path(notebook) %>
+          <%= link_to 'New Note', notebook_path(notebook) %>
+          <!--<p class="time"><%= notebook.created_at %></p> -->
+        </div>
     <% end %>
 
     <%= link_to 'New Notebook', "notebooks/new" %>

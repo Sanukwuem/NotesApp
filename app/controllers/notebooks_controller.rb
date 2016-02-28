@@ -5,6 +5,12 @@ class NotebooksController < ApplicationController
   def new
     @notebook = Notebook.new
   end
+
+  def show
+    @notebook = Notebook.all
+    @notebook = Notebook.find(params[:id])
+    @notes = @notebook.notes
+  end
   def create
     @notebook = Notebook.new(notebook_params)
     if @notebook.save

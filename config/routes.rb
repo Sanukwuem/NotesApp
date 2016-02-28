@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
-  get'notebooks' => 'notebooks#index'
-  get'notebooks/new' => 'notebooks#new'
+  get 'notebooks' => 'notebooks#index'
+  get 'notebooks/new' => 'notebooks#new'
   post 'notebooks' => 'notebooks#create'
-  get'notes' => 'notes#index'
+  get 'notebooks/:id' => 'notebooks#show', as: :notebook
   get 'notes/new' => 'notes#new'
   post 'notes' => 'notes#create'
+  get 'notes/:id' => 'notes#show', as: :note
+
+  get 'notes/:id/edit' => 'notes#edit', as: :edit_note
+  patch 'notes/:id' => 'notes#update'
+  get'notes' => 'notes#index'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
