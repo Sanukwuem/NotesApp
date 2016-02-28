@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="container">
+    <img src="">
+    <h1>Note</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+    
+    <%= form_for(@note) do |f| %>
+    	<div class="field">
+        <%= f.label :note %><br>
+        <%= f.text_area :content %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Create" %>
+    </div>
+   <% end %>
+        
+    
+  </div>
+</div>

@@ -14,14 +14,13 @@
 ActiveRecord::Schema.define(version: 20160225090131) do
 
   create_table "notebooks", force: true do |t|
-
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "notes", force: true do |t|
-
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

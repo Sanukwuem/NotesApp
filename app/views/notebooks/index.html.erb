@@ -11,12 +11,13 @@
 <% @notebooks.each do |notebook| %>
     <div class="notebook">
       <p class="content"><%= notebook.content %></p>
-      <p class="time"><%= notebook.created_at %></p>
+      <%= link_to 'New Note', "notes/new" %>
+      <!--<p class="time"><%= notebook.created_at %></p> -->
     </div>
     <% end %>
 
     <%= link_to 'New Notebook', "notebooks/new" %>
-    
+
   </div>
 </div>
 
