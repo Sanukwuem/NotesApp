@@ -1,25 +1,89 @@
-<div class="header">
-  <div class="container">
-    <img src="">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  h1 {
+    text-align: center;
+    font-size: 95px;
+
+  }
+
+  body{
+    background-color: #ECECEA
+  }
+
+  div.box{
+    width:975px;
+    height:715px;
+    border:2px
+    solid #000;
+  }
+
+  div.notebook {
+    text-align: left;
+    font-size: 30px;
+    width:400px;
+    height:85px;
+    border:2px
+    solid #000;
+  }
+  div.label {
+    text-align: center;
+    color: blue;
+    font-size: 60px;
+    width:975px;
+    height:85px;
+    border:2px
+    solid #000;
+  }
+  div.notebookinfo {
+    font-size: 12px;
+    color: blue;
+    width:100px;
+    height:25px;
+    border:1px
+    solid #000;
+  }
+
+  img{
+
+  }
+
+  </style>
+</head>
+<body>
+  <img src="https://www.wpclipart.com/education/supplies/notebook/spiral_notebook_dark_green.svg" alt="Notebook" style="width:497px;height:700px;position: absolute; bottom: -30px; right:210px;">
+  <div class="header">
+  <div class="container" style="width:1880px;height:200px;border:4px solid #000;">
     <h1>NotesApp</h1>
   </div>
 </div>
 
+<div class="box">
+<div class="label">
+  Notebooks
+</div>
+
 <div class="notebooks">
-  <div class="container">
+  <div class="container" >
 
     <% @notebooks.each do |notebook| %>
         <div class="notebook">
-          <p class="content"><%= notebook.content %></p>
+          <p class="content" ><%= notebook.content %></p>
+          </div>
+
+       <div class="notebookinfo">
           <%= link_to 'Notebook info', notebook_path(notebook) %>
-          <%= link_to 'New Note', notebook_path(notebook) %>
+      </div>
           <!--<p class="time"><%= notebook.created_at %></p> -->
-        </div>
+
     <% end %>
 
+    <p></p>
     <%= link_to 'New Notebook', "notebooks/new" %>
 
   </div>
 </div>
-
-
+</div>
+</body>
+</html>

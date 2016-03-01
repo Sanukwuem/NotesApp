@@ -1,17 +1,27 @@
 <div class="header">
   <div class="container">
-    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
-    <h1>BokenjiKan</h1>
+    <img src="">
+    <h1>New Note</h1>
   </div>
 </div>
 
 <div class="note">
   <div class="container">
-   
-      
-        
-        <%= link_to "Edit", edit_note_path(@note) %>
-     
-   
+
+    <%= form_for(@note) do |f| %>
+        <div class="field">
+          <%= f.label :note %><br>
+          <%= f.text_area :content %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Create" %>
+        </div>
+
+    <% end %>
+
+
+
+
+
   </div>
 </div>
