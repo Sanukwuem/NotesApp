@@ -75,8 +75,8 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/notebooks/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.064516">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state vertical-scroll-proportion="-33.35484">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -154,7 +154,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20160225085057_create_notebooks.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160225090131_create_parts.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/views/notes/new.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20160225085133_create_notes.rb" />
         <option value="$PROJECT_DIR$/app/views/notebooks/new.html.erb" />
@@ -168,6 +167,7 @@
         <option value="$PROJECT_DIR$/app/views/notebooks/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/notes_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/db/seeds.rb" />
       </list>
     </option>
   </component>
@@ -835,8 +835,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/notebooks/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.064516">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state vertical-scroll-proportion="-33.35484">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
           <folding />
         </state>
       </provider>

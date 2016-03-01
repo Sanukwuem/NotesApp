@@ -1,7 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  h1 {
+    text-align: center;
+    font-size: 95px;
+  }
+  body {
+    background-color: white;
+  }
+
+  div.new{
+    text-align: center;
+    font-size: 60px;
+    width:975px;
+    height:85px;
+    border:2px
+    solid #000;
+  }
+
+  textarea{
+    margin: auto;
+    height:234px;
+    width: 425px;
+  }
+
+  </style>
+</head>
+<body>
 <div class="header">
-  <div class="container">
+  <div class="container" style="width:1880px;height:200px;border:4px solid #000;">
     <img src="">
-    <h1>Notebook</h1>
+    <h1>Notes App</h1>
   </div>
 </div>
 
@@ -9,12 +39,12 @@
   <div class="container">
 
 
-
     <%= form_for(@notebook) do |f| %>
-    	<div class="field">
-        <%= f.label :notebook %><br>
+    	<div class="new">
+        <%= f.label :new %><br>
+      </div>
         <%= f.text_area :content %>
-    </div>
+
     <div class="actions">
       <%= f.submit "Create" %>
     </div>
@@ -23,3 +53,5 @@
 
   </div>
 </div>
+</body>
+</html>

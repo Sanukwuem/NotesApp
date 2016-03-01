@@ -5,11 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-t1 = Notebook.new(content: "Homework")
-
-t2 = Notebook.new(content: "Business Ideas")
-
-t3 = Notebook.new(content: "Ruby on Rails Study Guide")
-
-t4 = Notebook.new(content: "Software Engineering tips")
