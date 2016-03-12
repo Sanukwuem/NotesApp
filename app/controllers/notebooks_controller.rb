@@ -2,6 +2,12 @@ class NotebooksController < ApplicationController
   def index
     @notebooks = Notebook.all
     @notes = Note.all
+
+    #  if params[:search]
+    #  @notebooks = Notebook.search(params[:search]).order("created_at DESC")
+    #  else
+    #  @notebooks = Notebook.order("created_at DESC")
+    #  end
   end
   def new
     @notebook = Notebook.new
@@ -28,4 +34,6 @@ class NotebooksController < ApplicationController
       def notebook_params
         params.require(:notebook).permit(:content)
       end
+
+
   end
