@@ -1,1 +1,4 @@
 After you download file, run rails server and head to http://localhost:3000/notebooks/.
+
+After you create a notebook, if you click on the link in the table you will be directed to the specific notebooks page.
+When you create a note it directs you back to the notebook page. If you want to view your notes just go back to the notebook where the note was created.
