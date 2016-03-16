@@ -1,23 +1,98 @@
-<div class="header">
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+div.header{
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #FFD700;
+  font-size: 95px;
+}
+
+body{
+background-color: black;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+background-color: #111;
+}
+
+div.back{
+color: #FFD700;
+}
+
+div.createnote{
+background-color: white;
+}
+
+div.notes{
+color: #FFD700;
+}
+
+</style>
+
+</head>
+
+<body>
+
   <div class="container">
-    <img src="">
-    <h1>Note</h1>
-  </div>
+    <div class="header" style="width:1515px;height:200px;border:3px solid #FFFAF0;" >
+      <h1>NotesApp</h1>
+    </div>
+
+  <ul class="nav">
+    <li><a class="nav" href="http://localhost:3000/notebooks/">Home</a></li>
+    <li><a class="nav" href="http://localhost:3000/notebooks/new">Notebooks</a></li>
+  </ul>
+
+<div class ="back">
+Notebook: <%= @notebook.name %> <%= link_to "back", "http://localhost:3000/notebooks/new" %>
 </div>
 
-<div class="create">
-  <div class="container">
-
-    <%= form_for(@note) do |f| %>
-    	<div class="field">
-        <%= f.label :note %><br>
-        <%= f.text_area :content %>
-    </div>
-    <div class="actions">
-      <%= f.submit "Create" %>
-    </div>
-   <% end %>
-
-
-  </div>
+<div class ="createnote">
+<hr>
+<%= form_for @note, :url => { :action => :create, :id => @notebook.id} do |f| %>
+  Note: <%= f.text_field :note %> <br>
+  <%= f.submit %>
+<% end %>
+<hr />
 </div>
+
+
+<div class ="notes">
+    Note <hr>
+  <% for item in @notebook.notes %>
+  <td> <%= item.note %>  </td> <hr>
+<% end %>
+</div>
+
+</div>
+</body>
+</html>

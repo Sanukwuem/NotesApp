@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
-  get 'notebooks' => 'notebooks#index'
-  get 'notebooks/new' => 'notebooks#new'
-  post 'notebooks' => 'notebooks#create'
-  get 'notebooks/:id' => 'notebooks#show', as: :notebook
-  #get 'notebooks/:id' => 'notebooks#index'
-  get 'notebooks/:id/new' => 'notebooks#new', as: :new_notebook
-  post 'notebooks/:id' => 'notebooks#create' #possibly 'notebooks'
+  resource :notebooks
+  resource :notes
+  #get '/notebooks' => 'notebooks#index'
+  #get 'notebooks/new' => 'notebooks#new'
+  #post 'notebooks' => 'notebooks#create'
+  #get 'notebooks/:id' => 'notebooks#show', as: :notebook
+  #get 'notebooks/:id/new' => 'notebooks#new', as: :new_notebook
 
-  #post 'notes' => 'notes#create'
-  #get 'notes/:id' => 'notebooks#show'
-  get 'notes/:id' => 'notes#show', as: :note
-  post 'notes' => 'notebooks#show'
-
-  patch 'notebooks/:id' => 'notebooks#show'
   #get'notes' => 'notes#index'
 
 

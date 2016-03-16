@@ -1,39 +1,28 @@
 class NotebooksController < ApplicationController
-  def index
+  def index  #front page for notebooks
     @notebooks = Notebook.all
-    @notes = Note.all
-
-    #  if params[:search]
-    #  @notebooks = Notebook.search(params[:search]).order("created_at DESC")
-    #  else
-    #  @notebooks = Notebook.order("created_at DESC")
-    #  end
   end
+
   def new
     @notebook = Notebook.new
-    @note = Note.new
-  end
-
-  def show
-    #@notebook = Notebook.all
-    @notebook = Notebook.find(params[:id])
     @notebooks = Notebook.all
-    @note = Note.all
-
   end
+
+#  def show
+  #  @notebook = Notebook.find(params[:id]) #notebook/id page
+ #end
+
   def create
-    @notebook = Notebook.new(notebook_params)
+    @notebook = Notebook.new(comment_params)
     if @notebook.save
-      redirect_to '/notebooks'
+      redirect_to "http://localhost:3000/notebooks/new" #new_notebook_path
 
-    else
-      render 'new'
+    #else
+      #render 'new'
     end
-  end
-    private
-      def notebook_params
-        params.require(:notebook).permit(:content)
-      end
+end
 
-
+  def comment_params
+    params.require(:notebook).permit(:name)
   end
+end

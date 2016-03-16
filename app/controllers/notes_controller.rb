@@ -1,30 +1,21 @@
 class NotesController < ApplicationController
-  def index
-    @notes = Note.all
-  end
-  def new
-    @note = Note.new
-  end
 
-
-  def show
-    @note = Notebook.find(params[:id]) #Notebook.find(params[:id])
-  end
-
-
+def new
+  @notebook = Notebook.find(params[:id])
+  @note = @notebook.notes.build
+end
 
 def create
-  @note = Note.new(note_params) #find(params[:id])
-  if @note.save
-    redirect_to '/notebooks'
+  @notebook = Notebook.find(params[:id])
+  @note = @notebook.notes.new(comment_params1)    #build(params[:notes])
 
-  else
-    render 'new'
+  if @note.save
+    redirect_to "http://localhost:3000/notebooks/new"   #new_note_path(:id => @notebook.id)
   end
 end
 
-private
-def note_params
-  params.require(:note).permit(:content)
+
+def comment_params1
+  params.require(:note).permit(:note)
 end
 end
